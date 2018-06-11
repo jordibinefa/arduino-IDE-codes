@@ -23,10 +23,12 @@ void vDelayESP8266(unsigned long ulMilliseconds) {
   } while (millis() - ulPreviousMillis <= ulMilliseconds);
 }
 
-boolean bIsListed(String szSSID) {
+boolean bIsListed(String szSSID, int *pnWhichOne) {
   for (int i = 0; i < N_WIFIS ; i++) {
-    if (stWiFi[i].szSSID == szSSID)
+    if (stWiFi[i].szSSID == szSSID){
+      *pnWhichOne = i;
       return true;
+    }
   }
   return false;
 }
@@ -58,7 +60,7 @@ boolean bTryWifiConnection() {
     vDelayESP8266(1000);
   } else {
     for (int i = 0; i < n; ++i) {
-      if (bIsListed(WiFi.SSID(i)), &nWhichOne) {
+      if (bIsListed(WiFi.SSID(i), &nWhichOne)) {
         vConnectToWiFi(stWiFi[nWhichOne].szSSID, stWiFi[nWhichOne].szPWD);
         return true;
       }
