@@ -133,6 +133,7 @@ void loop() {
     char c = Serial.read();
     szMsg += c;
   }
-  vManageMsg();
+  if(szMsg != "")
+    vManageMsg();
   szMsg = "";
 }
