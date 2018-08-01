@@ -1,0 +1,1055 @@
+[
+    {
+        "id": "1e820c4.6c97bf4",
+        "type": "inject",
+        "z": "509a396e.0b7cc8",
+        "name": "[1,0,1,0,0,0,0,0]",
+        "topic": "",
+        "payload": "[1,0,1,0,0,0,0,0]",
+        "payloadType": "bin",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 300,
+        "y": 280,
+        "wires": [
+            [
+                "dacad41d.009c88"
+            ]
+        ]
+    },
+    {
+        "id": "3f50eb6d.14d5ac",
+        "type": "inject",
+        "z": "509a396e.0b7cc8",
+        "name": "[0,0,0,0,0,0,0,0]",
+        "topic": "",
+        "payload": "[0,0,0,0,0,0,0,0]",
+        "payloadType": "bin",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 300,
+        "y": 320,
+        "wires": [
+            [
+                "dacad41d.009c88"
+            ]
+        ]
+    },
+    {
+        "id": "8f44d4b0.3aca48",
+        "type": "debug",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 790,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "dacad41d.009c88",
+        "type": "modbus-write",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "unitid": "2",
+        "dataType": "MCoils",
+        "adr": "0",
+        "quantity": "8",
+        "server": "2f8849f.ee24736",
+        "x": 520,
+        "y": 240,
+        "wires": [
+            [
+                "8f44d4b0.3aca48"
+            ],
+            [
+                "87d0fd6e.6659f8",
+                "df682529.015ea"
+            ]
+        ]
+    },
+    {
+        "id": "df682529.015ea",
+        "type": "modbus-response",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "registerShowMax": 20,
+        "x": 830,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "1f3d2bdf.5dafac",
+        "type": "modbus-read",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "topic": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "unitid": "2",
+        "dataType": "Input",
+        "adr": "0",
+        "quantity": "8",
+        "rate": "1",
+        "rateUnit": "h",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "2f8849f.ee24736",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "x": 530,
+        "y": 320,
+        "wires": [
+            [
+                "8f44d4b0.3aca48"
+            ],
+            [
+                "8f44d4b0.3aca48"
+            ]
+        ]
+    },
+    {
+        "id": "e67d35f3.082f88",
+        "type": "modbus-write",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "1",
+        "quantity": "1",
+        "server": "2f8849f.ee24736",
+        "x": 540,
+        "y": 460,
+        "wires": [
+            [
+                "8f44d4b0.3aca48"
+            ],
+            [
+                "df682529.015ea",
+                "b729ce55.ee0868",
+                "f084ecb9.f4c9d"
+            ]
+        ]
+    },
+    {
+        "id": "36d71f64.e53fa",
+        "type": "modbus-write",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "2",
+        "quantity": "1",
+        "server": "2f8849f.ee24736",
+        "x": 540,
+        "y": 520,
+        "wires": [
+            [
+                "8f44d4b0.3aca48"
+            ],
+            [
+                "df682529.015ea",
+                "b729ce55.ee0868",
+                "41fcb902.56d038"
+            ]
+        ]
+    },
+    {
+        "id": "7ef2e860.98c52",
+        "type": "modbus-write",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "3",
+        "quantity": "1",
+        "server": "2f8849f.ee24736",
+        "x": 540,
+        "y": 680,
+        "wires": [
+            [
+                "8f44d4b0.3aca48"
+            ],
+            [
+                "df682529.015ea",
+                "f65cd121.b813a8",
+                "2bf1368e.ee23fa"
+            ]
+        ]
+    },
+    {
+        "id": "97a48c91.419c78",
+        "type": "modbus-write",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "4",
+        "quantity": "1",
+        "server": "2f8849f.ee24736",
+        "x": 540,
+        "y": 740,
+        "wires": [
+            [
+                "8f44d4b0.3aca48"
+            ],
+            [
+                "df682529.015ea",
+                "f65cd121.b813a8",
+                "2ce3de32.93a9d2"
+            ]
+        ]
+    },
+    {
+        "id": "9c492bc0.e83018",
+        "type": "ui_form",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "label": "Pressió",
+        "group": "25f9ba13.c00566",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Pressió",
+                "value": "Pressure",
+                "type": "number",
+                "required": true
+            }
+        ],
+        "formValue": {
+            "Pressure": ""
+        },
+        "payload": "",
+        "topic": "",
+        "x": 250,
+        "y": 460,
+        "wires": [
+            [
+                "889b3fbc.565518"
+            ]
+        ]
+    },
+    {
+        "id": "e492cf08.8fdbc8",
+        "type": "ui_form",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "label": "Temperatura",
+        "group": "25f9ba13.c00566",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Temperatura",
+                "value": "Temperatura",
+                "type": "number",
+                "required": true
+            }
+        ],
+        "formValue": {
+            "Temperatura": ""
+        },
+        "payload": "",
+        "topic": "",
+        "x": 230,
+        "y": 520,
+        "wires": [
+            [
+                "a229f412.dca64"
+            ]
+        ]
+    },
+    {
+        "id": "a229f412.dca64",
+        "type": "function",
+        "z": "509a396e.0b7cc8",
+        "name": "T",
+        "func": "msg.payload = msg.payload.Temperatura\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 520,
+        "wires": [
+            [
+                "36d71f64.e53fa"
+            ]
+        ]
+    },
+    {
+        "id": "b729ce55.ee0868",
+        "type": "ui_text",
+        "z": "509a396e.0b7cc8",
+        "group": "25f9ba13.c00566",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Resposta Modbus Pressió i Temperatura",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 880,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "889b3fbc.565518",
+        "type": "function",
+        "z": "509a396e.0b7cc8",
+        "name": "P",
+        "func": "msg.payload = msg.payload.Pressure\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 460,
+        "wires": [
+            [
+                "e67d35f3.082f88"
+            ]
+        ]
+    },
+    {
+        "id": "7b71293b.fec428",
+        "type": "ui_form",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "label": "Distància Insp",
+        "group": "c0e85afb.d653a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Inspecció",
+                "value": "DI",
+                "type": "number",
+                "required": true
+            }
+        ],
+        "formValue": {
+            "DI": ""
+        },
+        "payload": "",
+        "topic": "",
+        "x": 200,
+        "y": 680,
+        "wires": [
+            [
+                "8ce7c98a.02c6e8"
+            ]
+        ]
+    },
+    {
+        "id": "8ce7c98a.02c6e8",
+        "type": "function",
+        "z": "509a396e.0b7cc8",
+        "name": "DI",
+        "func": "msg.payload = msg.payload.DI\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 680,
+        "wires": [
+            [
+                "7ef2e860.98c52"
+            ]
+        ]
+    },
+    {
+        "id": "30c0a33c.0275b4",
+        "type": "ui_form",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "label": "Distància Expulsió",
+        "group": "c0e85afb.d653a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Expulsió",
+                "value": "DE",
+                "type": "number",
+                "required": true
+            }
+        ],
+        "formValue": {
+            "DE": ""
+        },
+        "payload": "",
+        "topic": "",
+        "x": 190,
+        "y": 740,
+        "wires": [
+            [
+                "5b32b23c.cb3c44"
+            ]
+        ]
+    },
+    {
+        "id": "5b32b23c.cb3c44",
+        "type": "function",
+        "z": "509a396e.0b7cc8",
+        "name": "DE",
+        "func": "msg.payload = msg.payload.DE\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 740,
+        "wires": [
+            [
+                "97a48c91.419c78"
+            ]
+        ]
+    },
+    {
+        "id": "23186855.67d3d",
+        "type": "inject",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 390,
+        "y": 40,
+        "wires": [
+            [
+                "691a631c.6932dc"
+            ]
+        ]
+    },
+    {
+        "id": "691a631c.6932dc",
+        "type": "function",
+        "z": "509a396e.0b7cc8",
+        "name": "Array Global",
+        "func": "var i;\n\nfor(i = 0; i < 8; i++)\n    global.set(\"Relay[\"+i+\"]\", 0);\n    \nmsg.payload = \"Encara cap\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 560,
+        "y": 40,
+        "wires": [
+            [
+                "87d0fd6e.6659f8",
+                "b729ce55.ee0868",
+                "f65cd121.b813a8",
+                "f084ecb9.f4c9d",
+                "41fcb902.56d038",
+                "2bf1368e.ee23fa",
+                "2ce3de32.93a9d2"
+            ]
+        ]
+    },
+    {
+        "id": "aa9daa3b.2db22",
+        "type": "ui_switch",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "label": "[0]",
+        "group": "ccfcd171.b2d418",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "f00293db.b9d93"
+            ]
+        ]
+    },
+    {
+        "id": "f00293db.b9d93",
+        "type": "function",
+        "z": "509a396e.0b7cc8",
+        "name": "Set Relay[0]",
+        "func": "global.set(\"Relay[\"+0+\"]\", msg.payload?1:0);\nmsg.payload = global.get(\"Relay\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 100,
+        "wires": [
+            [
+                "dacad41d.009c88"
+            ]
+        ]
+    },
+    {
+        "id": "495464fc.f2a46c",
+        "type": "ui_switch",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "label": "[1]",
+        "group": "ccfcd171.b2d418",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "fc063307.526f98"
+            ]
+        ]
+    },
+    {
+        "id": "fc063307.526f98",
+        "type": "function",
+        "z": "509a396e.0b7cc8",
+        "name": "Set Relay[1]",
+        "func": "global.set(\"Relay[\"+1+\"]\", msg.payload?1:0);\nmsg.payload = global.get(\"Relay\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 140,
+        "wires": [
+            [
+                "dacad41d.009c88"
+            ]
+        ]
+    },
+    {
+        "id": "3e77c211.b7d1a6",
+        "type": "ui_switch",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "label": "[2]",
+        "group": "ccfcd171.b2d418",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 130,
+        "y": 180,
+        "wires": [
+            [
+                "c0703b95.118a98"
+            ]
+        ]
+    },
+    {
+        "id": "c0703b95.118a98",
+        "type": "function",
+        "z": "509a396e.0b7cc8",
+        "name": "Set Relay[2]",
+        "func": "global.set(\"Relay[\"+2+\"]\", msg.payload?1:0);\nmsg.payload = global.get(\"Relay\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 180,
+        "wires": [
+            [
+                "dacad41d.009c88"
+            ]
+        ]
+    },
+    {
+        "id": "7a6f0686.11a61",
+        "type": "ui_switch",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "label": "[3]",
+        "group": "ccfcd171.b2d418",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "fecc4159.b582d"
+            ]
+        ]
+    },
+    {
+        "id": "fecc4159.b582d",
+        "type": "function",
+        "z": "509a396e.0b7cc8",
+        "name": "Set Relay[3]",
+        "func": "global.set(\"Relay[\"+3+\"]\", msg.payload?1:0);\nmsg.payload = global.get(\"Relay\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 220,
+        "wires": [
+            [
+                "dacad41d.009c88"
+            ]
+        ]
+    },
+    {
+        "id": "87d0fd6e.6659f8",
+        "type": "ui_text",
+        "z": "509a396e.0b7cc8",
+        "group": "ccfcd171.b2d418",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Resposta Modbus",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 770,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f65cd121.b813a8",
+        "type": "ui_text",
+        "z": "509a396e.0b7cc8",
+        "group": "c0e85afb.d653a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Resposta Modbus DI i DE",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 830,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "206073e3.20dc2c",
+        "type": "ui_slider",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "label": "Pressió [0..10 BAR]",
+        "group": "9abae03b.64f7e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "",
+        "min": "0",
+        "max": "10",
+        "step": "0.01",
+        "x": 130,
+        "y": 420,
+        "wires": [
+            [
+                "b31a4e42.15a788",
+                "13405fb.407b72"
+            ]
+        ]
+    },
+    {
+        "id": "13405fb.407b72",
+        "type": "ui_text",
+        "z": "509a396e.0b7cc8",
+        "group": "9abae03b.64f7e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Pressió (BAR)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 340,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b31a4e42.15a788",
+        "type": "function",
+        "z": "509a396e.0b7cc8",
+        "name": "x 100",
+        "func": "msg.payload = Math.round(msg.payload * 100);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 420,
+        "wires": [
+            [
+                "e67d35f3.082f88"
+            ]
+        ]
+    },
+    {
+        "id": "f084ecb9.f4c9d",
+        "type": "ui_text",
+        "z": "509a396e.0b7cc8",
+        "group": "9abae03b.64f7e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Resposta Modbus Pressió",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 840,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "1475d9bd.13bdee",
+        "type": "ui_slider",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "label": "Tª [0..100ºC]",
+        "group": "53a62685.d7b1c8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "",
+        "min": "0",
+        "max": "100",
+        "step": "0.1",
+        "x": 110,
+        "y": 560,
+        "wires": [
+            [
+                "16fc0039.6da8",
+                "4ca212d7.2ef264"
+            ]
+        ]
+    },
+    {
+        "id": "4ca212d7.2ef264",
+        "type": "ui_text",
+        "z": "509a396e.0b7cc8",
+        "group": "53a62685.d7b1c8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Tª (ºC)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 250,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "16fc0039.6da8",
+        "type": "function",
+        "z": "509a396e.0b7cc8",
+        "name": "x 10",
+        "func": "msg.payload = Math.round(msg.payload * 10);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 560,
+        "wires": [
+            [
+                "36d71f64.e53fa"
+            ]
+        ]
+    },
+    {
+        "id": "41fcb902.56d038",
+        "type": "ui_text",
+        "z": "509a396e.0b7cc8",
+        "group": "53a62685.d7b1c8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Resposta Modbus Temperatura",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 850,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "d719222c.541948",
+        "type": "ui_slider",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "label": "DI [0..4999]",
+        "group": "38d988cf.2b0cb8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "",
+        "min": 0,
+        "max": "4999",
+        "step": 1,
+        "x": 110,
+        "y": 640,
+        "wires": [
+            [
+                "36d65880.135aa8",
+                "7ef2e860.98c52"
+            ]
+        ]
+    },
+    {
+        "id": "36d65880.135aa8",
+        "type": "ui_text",
+        "z": "509a396e.0b7cc8",
+        "group": "38d988cf.2b0cb8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "DI (mm)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 380,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "2bf1368e.ee23fa",
+        "type": "ui_text",
+        "z": "509a396e.0b7cc8",
+        "group": "38d988cf.2b0cb8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Resposta Modbus DI",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 820,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "3dcbeee5.63dd62",
+        "type": "ui_slider",
+        "z": "509a396e.0b7cc8",
+        "name": "",
+        "label": "DE [0..4999]",
+        "group": "a64436b2.fe5238",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "",
+        "min": 0,
+        "max": "4999",
+        "step": 1,
+        "x": 110,
+        "y": 780,
+        "wires": [
+            [
+                "6cb17d3a.8a8abc",
+                "97a48c91.419c78"
+            ]
+        ]
+    },
+    {
+        "id": "6cb17d3a.8a8abc",
+        "type": "ui_text",
+        "z": "509a396e.0b7cc8",
+        "group": "a64436b2.fe5238",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "DE (mm)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 380,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "2ce3de32.93a9d2",
+        "type": "ui_text",
+        "z": "509a396e.0b7cc8",
+        "group": "a64436b2.fe5238",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Resposta Modbus DE",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 820,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "2f8849f.ee24736",
+        "type": "modbus-client",
+        "z": "",
+        "name": "Escriptura",
+        "clienttype": "simpleser",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB0",
+        "serialType": "RTU",
+        "serialBaudrate": "115200",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": 2,
+        "commandDelay": 1,
+        "clientTimeout": 1000,
+        "reconnectTimeout": 2000
+    },
+    {
+        "id": "25f9ba13.c00566",
+        "type": "ui_group",
+        "z": "",
+        "name": "Pressió i Temperatura",
+        "tab": "4ed4c0a0.26527",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "c0e85afb.d653a",
+        "type": "ui_group",
+        "z": "",
+        "name": "Distàncies",
+        "tab": "4ed4c0a0.26527",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "ccfcd171.b2d418",
+        "type": "ui_group",
+        "z": "",
+        "name": "Relés",
+        "tab": "1ab95e76.1110fa",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "9abae03b.64f7e",
+        "type": "ui_group",
+        "z": "",
+        "name": "Pressió",
+        "tab": "1ab95e76.1110fa",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false
+    },
+    {
+        "id": "53a62685.d7b1c8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Temperatura",
+        "tab": "1ab95e76.1110fa",
+        "order": 2,
+        "disp": true,
+        "width": "10",
+        "collapse": false
+    },
+    {
+        "id": "38d988cf.2b0cb8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Distància d'inspecció",
+        "tab": "1ab95e76.1110fa",
+        "order": 3,
+        "disp": true,
+        "width": "10",
+        "collapse": false
+    },
+    {
+        "id": "a64436b2.fe5238",
+        "type": "ui_group",
+        "z": "",
+        "name": "Distància d'expulsió",
+        "tab": "1ab95e76.1110fa",
+        "order": 4,
+        "disp": true,
+        "width": "10",
+        "collapse": false
+    },
+    {
+        "id": "4ed4c0a0.26527",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Modbus RTU",
+        "icon": "dashboard",
+        "order": 5
+    },
+    {
+        "id": "1ab95e76.1110fa",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Modbus RTU ginys",
+        "icon": "dashboard",
+        "order": 7
+    }
+]
