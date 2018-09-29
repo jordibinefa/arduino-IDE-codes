@@ -1,0 +1,378 @@
+[
+    {
+        "id": "d1519959.426a08",
+        "type": "udp in",
+        "z": "5330ceb1.58396",
+        "name": "",
+        "iface": "",
+        "port": "3333",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "utf8",
+        "x": 140,
+        "y": 40,
+        "wires": [
+            [
+                "e3d69599.080b58"
+            ]
+        ]
+    },
+    {
+        "id": "e3d69599.080b58",
+        "type": "debug",
+        "z": "5330ceb1.58396",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 510,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "e259a9a4.fa1588",
+        "type": "inject",
+        "z": "5330ceb1.58396",
+        "name": "Nivell LDR",
+        "topic": "",
+        "payload": "a",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 140,
+        "y": 100,
+        "wires": [
+            [
+                "1da55240.a1f43e"
+            ]
+        ]
+    },
+    {
+        "id": "1da55240.a1f43e",
+        "type": "udp out",
+        "z": "5330ceb1.58396",
+        "name": "",
+        "addr": "192.168.1.41",
+        "iface": "",
+        "port": "3334",
+        "ipv": "udp4",
+        "outport": "",
+        "base64": false,
+        "multicast": "false",
+        "x": 490,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "e9fe7b61.8f9478",
+        "type": "inject",
+        "z": "5330ceb1.58396",
+        "name": "Nivell botó",
+        "topic": "",
+        "payload": "i",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "1da55240.a1f43e"
+            ]
+        ]
+    },
+    {
+        "id": "6f97d34b.5e580c",
+        "type": "inject",
+        "z": "5330ceb1.58396",
+        "name": "Led groc encès",
+        "topic": "",
+        "payload": "2H",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 160,
+        "y": 180,
+        "wires": [
+            [
+                "1da55240.a1f43e"
+            ]
+        ]
+    },
+    {
+        "id": "a9b8d23e.7150e",
+        "type": "inject",
+        "z": "5330ceb1.58396",
+        "name": "Led groc apagat",
+        "topic": "",
+        "payload": "2L",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 160,
+        "y": 220,
+        "wires": [
+            [
+                "1da55240.a1f43e"
+            ]
+        ]
+    },
+    {
+        "id": "a748f7d8.9cdc88",
+        "type": "inject",
+        "z": "5330ceb1.58396",
+        "name": "Led vermell apagat",
+        "topic": "",
+        "payload": "15L",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "1da55240.a1f43e"
+            ]
+        ]
+    },
+    {
+        "id": "221fa857.084588",
+        "type": "inject",
+        "z": "5330ceb1.58396",
+        "name": "Led vermell encès",
+        "topic": "",
+        "payload": "15H",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 170,
+        "y": 300,
+        "wires": [
+            [
+                "1da55240.a1f43e"
+            ]
+        ]
+    },
+    {
+        "id": "43ab929a.ea903c",
+        "type": "inject",
+        "z": "5330ceb1.58396",
+        "name": "Led verd apagat",
+        "topic": "",
+        "payload": "12L",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 160,
+        "y": 340,
+        "wires": [
+            [
+                "1da55240.a1f43e"
+            ]
+        ]
+    },
+    {
+        "id": "706b34a1.a1528c",
+        "type": "inject",
+        "z": "5330ceb1.58396",
+        "name": "Led verd encès",
+        "topic": "",
+        "payload": "12H",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 160,
+        "y": 380,
+        "wires": [
+            [
+                "1da55240.a1f43e"
+            ]
+        ]
+    },
+    {
+        "id": "e8d27483.9cfa78",
+        "type": "inject",
+        "z": "5330ceb1.58396",
+        "name": "Led blanc apagat",
+        "topic": "",
+        "payload": "R4L",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 160,
+        "y": 460,
+        "wires": [
+            [
+                "1da55240.a1f43e"
+            ]
+        ]
+    },
+    {
+        "id": "d0b2f4bb.ca8148",
+        "type": "inject",
+        "z": "5330ceb1.58396",
+        "name": "Led blanc encès",
+        "topic": "",
+        "payload": "R4H",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 160,
+        "y": 420,
+        "wires": [
+            [
+                "1da55240.a1f43e"
+            ]
+        ]
+    },
+    {
+        "id": "7b1fe72.b8dba18",
+        "type": "ui_switch",
+        "z": "5330ceb1.58396",
+        "name": "",
+        "label": "Vermell",
+        "group": "54985699.99f5b8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "R3H",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "R3L",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 440,
+        "y": 340,
+        "wires": [
+            [
+                "1da55240.a1f43e"
+            ]
+        ]
+    },
+    {
+        "id": "43981912.0fb568",
+        "type": "ui_switch",
+        "z": "5330ceb1.58396",
+        "name": "",
+        "label": "Verd",
+        "group": "54985699.99f5b8",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "R1H",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "R1L",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 430,
+        "y": 460,
+        "wires": [
+            [
+                "1da55240.a1f43e"
+            ]
+        ]
+    },
+    {
+        "id": "bb0409d1.723158",
+        "type": "ui_switch",
+        "z": "5330ceb1.58396",
+        "name": "",
+        "label": "Blanc",
+        "group": "54985699.99f5b8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "R4H",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "R4L",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 430,
+        "y": 280,
+        "wires": [
+            [
+                "1da55240.a1f43e"
+            ]
+        ]
+    },
+    {
+        "id": "5c7cae4.372605",
+        "type": "ui_switch",
+        "z": "5330ceb1.58396",
+        "name": "",
+        "label": "Groc",
+        "group": "54985699.99f5b8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "R2H",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "R2L",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 430,
+        "y": 400,
+        "wires": [
+            [
+                "1da55240.a1f43e"
+            ]
+        ]
+    },
+    {
+        "id": "54985699.99f5b8",
+        "type": "ui_group",
+        "z": "",
+        "name": "leds",
+        "tab": "7975b917.119c48",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "7975b917.119c48",
+        "type": "ui_tab",
+        "z": "",
+        "name": "UDP",
+        "icon": "dashboard",
+        "order": 4
+    }
+]
